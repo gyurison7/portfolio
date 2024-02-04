@@ -1,0 +1,303 @@
+.container {
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sticky-wrapper {
+  position: relative;
+  height: 400vh;
+}
+.sticky-inner {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 200vh;
+  overflow: hidden;
+}
+
+.sc-main {
+  position: relative;
+  padding: 3rem;
+  padding-top: 10%;
+  height: 100vh;
+  z-index: 1;
+}
+.sc-main .main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+.sc-main .main-title .line {
+  display: flex;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10rem;
+  font-weight: 400;
+  line-height: 100%;
+  overflow: hidden;
+}
+.sc-main .main-title .line.move {
+  transition: transfrom 0.5s linear;
+}
+.sc-main .main-title .italic {
+  display: flex;
+  overflow: hidden;
+  font-family: var(--font-family-light-italic);
+}
+
+.sc-introduce {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  /* padding: 15rem 3rem 3rem 40rem; */
+  padding: 30vh 2.5vw 3vh 36vw;
+  background-color: #fff;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: background-color 0.5s;
+}
+.sc-introduce.dark {
+  background-color: var(--main-color);
+}
+.sc-introduce p {
+  font-family: var(--font-family-sf-pro);
+  font-size: 6.4vw;
+  line-height: 100%;
+}
+.sc-introduce p .word {
+  word-break: keep-all;
+  color: var(--main-color);
+  opacity: 0.1;
+}
+
+.sc-banner {
+  position: relative;
+  height: 450vh;
+  background-color: #fff;
+  overflow: hidden;
+  transition: background-color 0.5s;
+}
+.sc-banner.dark {
+  background-color: var(--main-color);
+}
+.sc-banner .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  opacity: 0;
+}
+.sc-banner svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sc-project {
+  position: relative;
+  height: 600vh;
+  margin-top: 65vh;
+  margin-bottom: -100vh;
+}
+.sc-project .project {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.sc-project .project-1 {
+  z-index: 1;
+}
+.sc-project .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 5rem 3rem 0;
+  z-index: 2;
+}
+.sc-project .content-wrapper .title {
+  color: #fff;
+  font-size: 5.5rem;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+.sc-project .content-wrapper .wave-animation {
+  display: flex;
+  overflow: hidden;
+}
+.sc-project .content-wrapper .description {
+  font-family: var(--font-family-sf-pro);
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 150%;
+}
+.sc-project .content-wrapper .btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+}
+.sc-project .content-wrapper .btn-wrapper a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0.5rem;
+}
+.sc-project .content-wrapper .btn-wrapper span {
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+.sc-project .content-wrapper .btn-wrapper .link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.sc-project .btn-wrapper a:hover .link-btn {
+  transform: scale(4);
+  transform-origin: left;
+}
+.sc-project .btn-wrapper .link-btn img {
+  width: 2rem;
+  height: 2rem;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.sc-project .btn-wrapper a:hover .link-btn img {
+  transform: translateY(0);
+  opacity: 1;
+  transform: scale(0.5);
+}
+.sc-project .img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.sc-project .img-wrapper.on {
+  transform: scale(1.1);
+  filter: blur(3px);
+}
+.sc-project .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sc-project .project-1 .img-wrapper.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: auto;
+  height: 100%;
+}
+.sc-project .project-1 .img-wrapper.right.on {
+  filter: opacity(0.5);
+}
+
+.sc-project .project-2 {
+  z-index: 2;
+}
+.sc-project .video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.sc-project .video-wrapper.on {
+  transform: scale(1.1);
+  filter: blur(3px);
+}
+.sc-project .video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sc-project .project-3 {
+  background: #121023;
+  z-index: 3;
+}
+.sc-project .project-3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: url("../imgs/project3-bg.png") no-repeat center / cover;
+}
+.sc-project .project-3 .img-wrapper-lego {
+  position: absolute;
+  bottom: 7rem;
+  right: 4rem;
+  width: 320px;
+  height: 320px;
+  transform: rotate(5deg);
+  animation: legoAnimation 7s infinite;
+}
+@media (min-width: 1537px) {
+  .sc-project .project-3 .img-wrapper-lego {
+    width: 450px;
+    height: 450px;
+  }
+}
+.sc-project .project-3 .img-wrapper-lego img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@keyframes legoAnimation {
+  0% {
+    transform: translateY(0) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-15%) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(5deg);
+  }
+}
+
+.sc-project .project-4 {
+  z-index: 4;
+}
+
+.sc-project .project-5 {
+  z-index: 5;
+}
+
+.sc-project .project-6 {
+  z-index: 6;
+}

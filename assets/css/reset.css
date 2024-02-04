@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "KonnectLightItalic";
+  src: url("../fonts/646483f351fa167831598b82_Konnect-LightItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "KonnectRegular";
+  src: url("../fonts/646483f3e81b76287a0daaf2_Konnect-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "KonnectLight";
+  src: url("../fonts/646483f6ff1b9504a8d93b89_Konnect-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProKR";
+  src: url("../fonts/SFProKRDisplay_regular.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+fieldset {
+  border: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  min-height: 100%;
+  color: #fff;
+  background-color: var(--main-color);
+  font-family: "KonnectRegular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02rem;
+}

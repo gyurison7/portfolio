@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Son Gyuri</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/layout.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-area">
+        <h1 class="logo"></h1>
+        <div>
+          Son Gyuri<br />
+          Based in Seoul, Korea
+        </div>
+      </div>
+      <div class="menu-area">
+        <button class="menu-btn">
+          <span>Menu</span>
+          <span class="hidden-text">Menu</span>
+        </button>
+        <div class="anchor-menu">
+          <div class="animation-wrapper"><a class="cursor-toggle" href="#home">Home</a></div>
+          <div class="animation-wrapper"><a class="cursor-toggle" href="#project">Project</a></div>
+          <div class="animation-wrapper"><a class="cursor-toggle" href="#introduce">About</a></div>
+          <div class="animation-wrapper"><a class="cursor-toggle" href="#contact">Contact</a></div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="scroll-indicator">
+      <a class="cursor-toggle" href="">
+        <div class="scroll-wrapper">
+          <div class="dot">
+            <img src="./assets/svgs/scroll-top.svg" alt="" />
+          </div>
+          <div class="circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 48 48"
+              width="48"
+              height="48"
+              preserveAspectRatio="xMidYMid meet"
+              style="
+                width: 100%;
+                height: 100%;
+                transform: translate3d(0px, 0px, 0px);
+                content-visibility: visible;
+              "
+            >
+              <defs>
+                <clipPath id="__lottie_element_3">
+                  <rect width="48" height="48" x="0" y="0"></rect>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#__lottie_element_3)">
+                <g
+                  transform="matrix(1,0,0,1,21.422000885009766,21.672000885009766)"
+                  opacity="1"
+                  style="display: block"
+                >
+                  <g opacity="1" transform="matrix(1,0,0,1,2.578000068664551,2.328000068664551)">
+                    <path
+                      fill="rgb(255,255,255)"
+                      fill-opacity="0"
+                      d=" M0,-20 C11.038000106811523,-20 20,-11.038000106811523 20,0 C20,11.038000106811523 11.038000106811523,20 0,20 C-11.038000106811523,20 -20,11.038000106811523 -20,0 C-20,-11.038000106811523 -11.038000106811523,-20 0,-20z"
+                    ></path>
+                    <path
+                      stroke-linecap="butt"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="4"
+                      stroke="rgb(255,255,255)"
+                      stroke-opacity="0.5"
+                      stroke-width="1"
+                      d=" M0,-20 C11.038000106811523,-20 20,-11.038000106811523 20,0 C20,11.038000106811523 11.038000106811523,20 0,20 C-11.038000106811523,20 -20,11.038000106811523 -20,0 C-20,-11.038000106811523 -11.038000106811523,-20 0,-20z"
+                    ></path>
+                  </g>
+                </g>
+                <g
+                  transform="matrix(1,0,0,1,21.422000885009766,21.672000885009766)"
+                  opacity="1"
+                  style="display: block"
+                >
+                  <g opacity="1" transform="matrix(1,0,0,1,2.578000068664551,2.328000068664551)">
+                    <path fill="rgb(255,255,255)" fill-opacity="0" d="M0 0"></path>
+                    <path
+                      stroke-linecap="butt"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="4"
+                      stroke="rgb(255,255,255)"
+                      stroke-opacity="1"
+                      stroke-width="1"
+                      d="M0 0"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </aside>
+
+    <main class="container">
+      <div class="sticky-wrapper">
+        <div class="sticky-inner">
+          <section class="sc-main">
+            <h2 class="main-title inner">
+              <div class="line">
+                <span class="char">M</span>
+                <span class="char">a</span>
+                <span class="char">r</span>
+                <span class="char">k</span>
+                <span class="char">u</span>
+                <span class="char">p</span>
+              </div>
+              <div class="line move">
+                <span class="char">D</span>
+                <span class="char">e</span>
+                <span class="char">v</span>
+                <span class="char">e</span>
+                <span class="char">l</span>
+                <span class="char">o</span>
+                <span class="char">p</span>
+                <span class="char">e</span>
+                <span class="char">r&nbsp;</span>
+                <span class="italic">
+                  <span class="char">o</span>
+                  <span class="char">r</span>
+                </span>
+              </div>
+              <div class="line italic">
+                <span class="char">P</span>
+                <span class="char">u</span>
+                <span class="char">b</span>
+                <span class="char">l</span>
+                <span class="char">i</span>
+                <span class="char">s</span>
+                <span class="char">h</span>
+                <span class="char">e</span>
+                <span class="char">r.</span>
+              </div>
+            </h2>
+          </section>
+
+          <section class="sc-introduce">
+            <h2 class="blind">자기소개</h2>
+            <p>
+              <span class="word">끊임없이</span>
+              <span class="word">배우며</span>
+              <span class="word">지속적으로</span>
+              <span class="word">성장하는</span>
+              <span class="word">것에</span>
+              <span class="word">가치를</span>
+              <span class="word">둡니다.</span>
+              <span class="word">어떠한</span>
+              <span class="word">문제에</span>
+              <span class="word">맞닥뜨려도</span>
+              <span class="word">반드시</span>
+              <span class="word">해결해내는</span>
+              <span class="word">문제</span>
+              <span class="word">해결력과</span>
+              <span class="word">포기하지</span>
+              <span class="word">않는</span>
+              <span class="word">끈기를</span>
+              <span class="word">갖고</span>
+              <span class="word">있습니다.</span>
+              <span class="word">탄탄한</span>
+              <span class="word">마크업과</span>
+              <span class="word">효율적인</span>
+              <span class="word">CSS를</span>
+              <span class="word">기반으로</span>
+              <span class="word">유저</span>
+              <span class="word">중심의</span>
+              <span class="word">사용성과</span>
+              <span class="word">UX</span>
+              <span class="word">향상을</span>
+              <span class="word">위해</span>
+              <span class="word">깊이</span>
+              <span class="word">있게</span>
+              <span class="word">고민합니다.</span>
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <section class="sc-banner">
+        <h2 class="title inner">
+          <span class="word1">From&nbsp;</span>
+          <span class="word2">Challenge&nbsp;</span>
+          <span class="word3">to&nbsp;</span>
+          <span class="word4">Failure,&nbsp;</span>
+          <span class="word5">From&nbsp;</span>
+          <span class="word6">Failure&nbsp;</span>
+          <span class="word7">to&nbsp;</span>
+          <span class="word8">Growth&nbsp;</span>
+        </h2>
+        <svg
+          class="ell"
+          fill="none"
+          height="424"
+          viewBox="0 0 762 424"
+          width="762"
+          xmlns="http://www.w3.org/2000/svg"
+          style="transform: translate(-50%, -50%) rotate(40deg)"
+        >
+          <path
+            d="m761.5 212c0 58.278-42.459 111.144-111.335 149.469-68.86 38.316-164.023 62.031-269.165 62.031s-200.305-23.715-269.165-62.031c-68.8763-38.325-111.335-91.191-111.335-149.469 0-58.279 42.4587-111.145 111.335-149.4702 68.86-38.3158 164.023-62.030288 269.165-62.030288s200.305 23.714488 269.165 62.030288c68.876 38.3252 111.335 91.1912 111.335 149.4702z"
+            opacity="0"
+            stroke="#fff"
+          ></path>
+        </svg>
+      </section>
+
+      <section class="sc-project" id="project">
+        <h2 class="blind">프로젝트</h2>
+        <section class="project-1 project">
+          <div class="content-wrapper inner">
+            <h3 class="title">PP Fragment</h3>
+            <p class="description">GSAP과 scrollTrigger를 활용한 반응형 웹사이트입니다.</p>
+            <div class="btn-wrapper">
+              <a
+                href="https://gyurison7.github.io/pp-fragment-clone/"
+                class="see-project cursor-toggle"
+                target="_blank"
+              >
+                <span>See Porject</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+              <a
+                href="https://velog.io/@orangetree401/코드-리뷰-PP-Fragment-클론-코딩"
+                class="code-review cursor-toggle"
+                target="_blank"
+              >
+                <span>Code Review</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+            </div>
+          </div>
+          <div class="img-wrapper right">
+            <img src="./assets/imgs/project-1.jpg" alt="" />
+          </div>
+        </section>
+
+        <section class="project-2 project">
+          <div class="content-wrapper inner">
+            <h3 class="title">Enterprise Blockchain</h3>
+            <p class="description">GSAP과 scrollTrigger를 활용한 반응형 웹사이트입니다.</p>
+            <div class="btn-wrapper">
+              <a
+                href="https://gyurison7.github.io/enterpriseblockchain-clone/"
+                class="see-project cursor-toggle"
+                target="_blank"
+              >
+                <span>See Porject</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+              <a
+                href="https://velog.io/@orangetree401/코드-리뷰-엔터프라이즈-블록체인-클론-코딩"
+                class="code-review cursor-toggle"
+                target="_blank"
+              >
+                <span>Code Review</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+            </div>
+          </div>
+          <div class="video-wrapper">
+            <video
+              autoplay
+              loop
+              playsinline
+              muted
+              src="./assets/videos/Archivo-VariableFont_Medium_C_PC.mp4"
+            ></video>
+          </div>
+        </section>
+
+        <section class="project-3 project">
+          <div class="content-wrapper inner">
+            <h3 class="title">Lego Classic Sapce</h3>
+            <p class="description">
+              GSAP 라이브러리를 활용해 인터랙티브한 모션에 중점을 두고<br />
+              클론 코딩한 웹사이트입니다.
+            </p>
+            <div class="btn-wrapper">
+              <a
+                href="https://gyurison7.github.io/legospace-clone/"
+                class="see-project cursor-toggle"
+                target="_blank"
+              >
+                <span>See Porject</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+              <a
+                href="https://velog.io/@orangetree401/코드-리뷰-Lego-Classic-Space-클론-코딩"
+                class="code-review cursor-toggle"
+                target="_blank"
+              >
+                <span>Code Review</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+            </div>
+          </div>
+          <div class="img-wrapper-lego">
+            <img src="./assets/imgs/atom.png" alt="" />
+          </div>
+        </section>
+
+        <section class="project-4 project">
+          <div class="content-wrapper inner">
+            <h3 class="title">LOUD</h3>
+            <p class="description">
+              JSON 비동기 통신을 통해 데이터를 바인딩하여<br />
+              클론 코딩한 웹사이트입니다.
+            </p>
+            <div class="btn-wrapper">
+              <a
+                href="https://gyurison7.github.io/loud-clone/"
+                class="see-project cursor-toggle"
+                target="_blank"
+              >
+                <span>See Porject</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+              <a
+                href="https://velog.io/@orangetree401/코드-리뷰-LOUD-클론-코딩"
+                class="code-review cursor-toggle"
+                target="_blank"
+              >
+                <span>Code Review</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+            </div>
+          </div>
+          <div class="img-wrapper">
+            <img src="./assets/imgs/project-4.webp" alt="" />
+          </div>
+        </section>
+
+        <section class="project-5 project">
+          <div class="content-wrapper inner">
+            <h3 class="title">GS Elevator</h3>
+            <p class="description">
+              SCSS를 사용하여 다양한 디바이스에 유연하게 대응하는<br />
+              반응형 웹사이트입니다.
+            </p>
+            <div class="btn-wrapper">
+              <a
+                href="https://gyurison7.github.io/gs-elevator-clone/"
+                class="see-project cursor-toggle"
+                target="_blank"
+              >
+                <span>See Porject</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+              <a
+                href="https://velog.io/@orangetree401/코드-리뷰-GS-Elevator-클론-코딩"
+                class="code-review cursor-toggle"
+                target="_blank"
+              >
+                <span>Code Review</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+            </div>
+          </div>
+          <div class="img-wrapper">
+            <img src="./assets/imgs/project-5.jpg" alt="" />
+          </div>
+        </section>
+
+        <section class="project-6 project">
+          <div class="content-wrapper inner">
+            <h3 class="title">Seoul City Hall</h3>
+            <p class="description">
+              시맨틱 태그 및 IR기법을 사용하여 웹 접근성에 중점을 두고<br />
+              클론 코딩한 웹사이트입니다.
+            </p>
+            <div class="btn-wrapper">
+              <a
+                href="https://gyurison7.github.io/loud-clone/"
+                class="see-project cursor-toggle"
+                target="_blank"
+              >
+                <span>See Porject</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+              <a
+                href="https://velog.io/@orangetree401/코드-리뷰-LOUD-클론-코딩"
+                class="code-review cursor-toggle"
+                target="_blank"
+              >
+                <span>Code Review</span>
+                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
+              </a>
+            </div>
+          </div>
+          <div class="img-wrapper">
+            <img src="" alt="" />
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer inner" id="contact">
+      <div class="top">
+        <h2 class="title">Contact Me!</h2>
+        <p>
+          저는 2년동안 <b>php 개발자</b>로 일한 경험이 있습니다.<br />
+          이 경험을 바탕으로 기획자, 개발자, 그리고 다른 팀원들과도<br />
+          <b>커뮤니케이션이 원활한</b> 퍼블리셔가 되겠습니다.
+        </p>
+      </div>
+      <div class="bottom">
+        <div class="contact-wrapper">
+          <a class="cursor-toggle" href="mailto:orangetree401@gmail.com">orangetree401@gmail.com</a>
+          <a class="cursor-toggle" href="https://velog.io/@orangetree401/posts" target="_blank"
+            ><img src="./assets/imgs/velog-icon.png" alt="velog"
+          /></a>
+          <a class="cursor-toggle" href="https://github.com/gyurison7" target="_blank"
+            ><img src="./assets/imgs/github-icon.png" alt="github"
+          /></a>
+        </div>
+        <small>© 2024 All Rights Reserved.</small>
+      </div>
+    </footer>
+    <div class="cursor">
+      <div class="cursor-dot"></div>
+    </div>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
