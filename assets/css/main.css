@@ -60,13 +60,9 @@
   height: 200vh;
   /* padding: 15rem 3rem 3rem 40rem; */
   padding: 30vh 2.5vw 3vh 36vw;
-  background-color: #fff;
   z-index: 2;
   transform: translateX(100%);
   transition: background-color 0.5s;
-}
-.sc-introduce.dark {
-  background-color: var(--main-color);
 }
 .sc-introduce p {
   font-family: var(--font-family-sf-pro);
@@ -82,12 +78,8 @@
 .sc-banner {
   position: relative;
   height: 450vh;
-  background-color: #fff;
   overflow: hidden;
   transition: background-color 0.5s;
-}
-.sc-banner.dark {
-  background-color: var(--main-color);
 }
 .sc-banner .title {
   display: flex;
@@ -111,7 +103,6 @@
   position: relative;
   height: 600vh;
   margin-top: 65vh;
-  margin-bottom: -100vh;
 }
 .sc-project .project {
   position: sticky;
@@ -260,8 +251,8 @@
 }
 .sc-project .project-3 .img-wrapper-lego {
   position: absolute;
-  bottom: 7rem;
-  right: 4rem;
+  bottom: 8rem;
+  right: 5rem;
   width: 320px;
   height: 320px;
   transform: rotate(5deg);
@@ -300,4 +291,48 @@
 
 .sc-project .project-6 {
   z-index: 6;
+}
+
+.sc-skills {
+  position: relative;
+  height: 300vh;
+}
+.sc-skills .sticky-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+.sc-skills .sticky-wrapper .card-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.sc-skills .sticky-wrapper .card-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25vw;
+  height: 34vw;
+  min-width: 25vw;
+  max-width: 25vw;
+  border-radius: 1.5rem;
+  background: var(--main-color);
+  padding: 2rem;
+  color: #fff;
+}
+.sc-skills .sticky-wrapper .card-list li + li {
+  margin-left: 5vw;
+}
+.sc-skills .sticky-wrapper .card-list .title {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 3.75vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.sc-skills .sticky-wrapper .card-list p {
+  font-size: 1vw;
+  line-height: 150%;
 }

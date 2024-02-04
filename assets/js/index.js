@@ -14,13 +14,11 @@ gsap.ticker.lagSmoothing(0);
 
 // header
 $(".menu-btn").hover(function () {
-  cursorToggle();
   $(".menu-btn span").toggleClass("on");
 });
 
 $(".menu-btn").click(function () {
-  $(".menu-btn").toggleClass("open");
-  $(".anchor-menu").toggleClass("open");
+  $(".menu-btn, .anchor-menu").toggleClass("open");
   gsap.from(".anchor-menu a", {
     yPercent: -100,
     stagger: 0.1,
@@ -92,12 +90,11 @@ gsap.to(".sc-introduce", {
     invalidateOnRefresh: true,
     // markers: true,
     onEnter: function () {
-      $(".menu-btn").addClass("toggle");
-      $(".scroll-indicator").addClass("toggle");
+      $(".sc-introduce, .sc-banner").addClass("light");
+      $(".menu-btn, .scroll-indicator").addClass("toggle");
     },
     onLeaveBack: function () {
-      $(".menu-btn").removeClass("toggle");
-      $(".scroll-indicator").removeClass("toggle");
+      $(".menu-btn, .scroll-indicator").removeClass("toggle");
     },
   },
   xPercent: -100,
@@ -122,7 +119,7 @@ gsap.to(".logo-area", {
 gsap.to(".sc-introduce p .word", {
   scrollTrigger: {
     trigger: ".sc-introduce p",
-    start: "100% 0%",
+    start: "120% 0%",
     end: "200% 0%",
     scrub: true,
     // markers: true,
@@ -130,6 +127,8 @@ gsap.to(".sc-introduce p .word", {
   stagger: 0.2,
   opacity: 1,
 });
+
+const toggleElements = ".menu-btn, .logo-area, .scroll-indicator";
 
 // sc-banner
 const bannerMotion = gsap.timeline({
@@ -140,18 +139,12 @@ const bannerMotion = gsap.timeline({
     scrub: true,
     // markers: true,
     onEnter: function () {
-      $(".sc-introduce").addClass("dark");
-      $(".sc-banner").addClass("dark");
-      $(".menu-btn").removeClass("toggle");
-      $(".logo-area").removeClass("toggle");
-      $(".scroll-indicator").removeClass("toggle");
+      $(".sc-banner").removeClass("light");
+      $(toggleElements).removeClass("toggle");
     },
     onLeaveBack: function () {
-      $(".sc-introduce").removeClass("dark");
-      $(".sc-banner").removeClass("dark");
-      $(".menu-btn").addClass("toggle");
-      $(".logo-area").addClass("toggle");
-      $(".scroll-indicator").addClass("toggle");
+      $(".sc-banner").addClass("light");
+      $(toggleElements).addClass("toggle");
     },
   },
 });
@@ -194,6 +187,62 @@ $(".see-project, .code-review").hover(function () {
   $(this).closest(".project").find(".img-wrapper").toggleClass("on");
   $(this).closest(".project").find(".video-wrapper").toggleClass("on");
 });
+
+// sc-skills
+const cardMotion = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sc-skills",
+    start: "0% 20%",
+    end: "50% 0%",
+    scrub: 3,
+    // markers: true,
+    onEnter: function () {
+      $(".sc-skills").addClass("light");
+      $(toggleElements).addClass("toggle");
+    },
+    onLeave: function () {
+      $(".sc-skills").removeClass("light");
+      $(toggleElements).removeClass("toggle");
+    },
+    onEnterBack: function () {
+      $(".sc-skills").addClass("light");
+      $(toggleElements).addClass("toggle");
+    },
+    onLeaveBack: function () {
+      $(toggleElements).removeClass("toggle");
+    },
+  },
+  ease: "linear",
+});
+const xValue1 = window.innerWidth * 1.038;
+const xValue2 = window.innerWidth * 1.045;
+const xValue3 = window.innerWidth * 1.041;
+const xValue4 = window.innerWidth * 1.17;
+cardMotion
+  .fromTo(
+    ".card1",
+    { transform: `translateX(${xValue1}px) rotate(-16deg)` },
+    { transform: `translateX(-${xValue1}px) rotate(16deg)` },
+    "a"
+  )
+  .fromTo(
+    ".card2",
+    { transform: `translateX(${xValue2}px) rotate(19deg)` },
+    { transform: `translateX(-${xValue2}px) rotate(-19deg)` },
+    "a"
+  )
+  .fromTo(
+    ".card3",
+    { transform: `translateX(${xValue3}px) rotate(-11deg)` },
+    { transform: `translateX(-${xValue3}px) rotate(11deg)` },
+    "a"
+  )
+  .fromTo(
+    ".card4",
+    { transform: `translateX(${xValue4}px) rotate(19deg)` },
+    { transform: `translateX(-${xValue4}px) rotate(-19deg)` },
+    "a"
+  );
 
 // cursor
 document.addEventListener("DOMContentLoaded", function () {

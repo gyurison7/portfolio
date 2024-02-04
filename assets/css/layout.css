@@ -74,6 +74,7 @@ header .menu-area .anchor-menu {
   background-color: #fff;
   color: var(--main-color);
   border-radius: 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
   visibility: hidden;
   transition: 0.3s;
@@ -89,29 +90,32 @@ header .menu-area .anchor-menu .animation-wrapper {
   align-items: flex-end;
   overflow: hidden;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 header .menu-area .anchor-menu .animation-wrapper::before {
   content: "";
   display: block;
   width: 48px;
   height: 48px;
-  margin-left: -3rem;
+  margin-left: -48px;
   background: url("../svgs/arrow-right.svg") no-repeat center;
   transition: 0.3s;
 }
 header .menu-area .anchor-menu a {
   display: block;
+  width: 100%;
   font-size: 2.5rem;
   line-height: 120%;
 }
 header .anchor-menu .animation-wrapper:hover::before {
-  margin-left: 0rem;
+  margin-left: 0;
 }
+
 .scroll-indicator {
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  bottom: 5vh;
+  bottom: 8vh;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -173,33 +177,19 @@ header .anchor-menu .animation-wrapper:hover::before {
 
 footer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
-  top: 100vh;
+  top: -100vh;
   padding: 0 3rem;
 }
 footer .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 10rem 0;
   color: #fff;
 }
 footer .top .title {
-  font-size: 3.5rem;
-  font-weight: 300;
+  font-size: 5.5rem;
   line-height: 150%;
-}
-footer .top p {
-  padding-right: 2rem;
-  font-family: var(--font-family-sf-pro);
-  font-size: 1.5rem;
-  line-height: 150%;
-  color: rgba(255, 255, 255, 0.7);
-}
-footer .top b {
-  color: #fff;
 }
 footer .bottom {
   display: flex;
@@ -210,7 +200,7 @@ footer .bottom {
   bottom: 0;
   transform: translateX(-50%);
   width: calc(100% - 6rem);
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   background-color: #fff;
   border-radius: 1rem 1rem 0 0;
   color: var(--main-color);
@@ -220,7 +210,7 @@ footer .bottom .contact-wrapper {
   align-items: center;
 }
 footer .bottom .contact-wrapper a {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
 }
 footer .bottom .contact-wrapper img {
   width: 24px;
