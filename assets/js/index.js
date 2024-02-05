@@ -18,11 +18,28 @@ $(".menu-btn").hover(function () {
 });
 
 $(".menu-btn").click(function () {
-  $(".menu-btn, .anchor-menu").toggleClass("open");
-  gsap.from(".anchor-menu a", {
-    yPercent: -100,
-    stagger: 0.1,
-  });
+  if ($(this).hasClass("open")) {
+    // 닫기
+    gsap.to(".anchor-menu a", {
+      yPercent: -100,
+      onComplete: () => {
+        $(".menu-btn, .anchor-menu").removeClass("open");
+      },
+    });
+  } else {
+    // 열기
+    $(".menu-btn, .anchor-menu").addClass("open");
+    gsap.fromTo(
+      ".anchor-menu a",
+      {
+        yPercent: -100,
+      },
+      {
+        yPercent: 0,
+        stagger: 0.1,
+      }
+    );
+  }
 });
 
 // anchor-menu
@@ -44,7 +61,7 @@ $(".anchor-menu a").click(function (e) {
   } else if (target === "#introduce") {
     const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     // 퍼센테이지를 다시 픽셀 값으로 계산
-    scrollPixel = (totalScrollHeight * 12.9) / 100;
+    scrollPixel = (totalScrollHeight * 11.6) / 100;
     lenis.scrollTo(scrollPixel);
   } else {
     const targetOffset = element.offset().top;
@@ -56,10 +73,6 @@ $(".anchor-menu a").click(function (e) {
 $(".scroll-indicator a").click(function (e) {
   e.preventDefault();
   lenis.scrollTo(0);
-});
-
-$(".cursor-toggle").hover(function () {
-  $(".cursor-dot").toggleClass("on");
 });
 
 // sc-main
@@ -104,31 +117,24 @@ gsap.to(".logo-area", {
   scrollTrigger: {
     trigger: ".sc-introduce",
     start: "70% 0%",
-    end: "100% 0%",
-    scrub: true,
+    end: "200% 0%",
+    toggleClass: { targets: ".logo-area", className: "opacity" },
     // markers: true,
-    onEnter: function () {
-      $(".logo-area").addClass("toggle");
-    },
-    onLeaveBack: function () {
-      $(".logo-area").removeClass("toggle");
-    },
   },
 });
 
 gsap.to(".sc-introduce p .word", {
   scrollTrigger: {
     trigger: ".sc-introduce p",
-    start: "120% 0%",
+    start: "100% 0%",
     end: "200% 0%",
     scrub: true,
+    toggleClass: { targets: ".infinite-text span", className: "opacity" },
     // markers: true,
   },
   stagger: 0.2,
   opacity: 1,
 });
-
-const toggleElements = ".menu-btn, .logo-area, .scroll-indicator";
 
 // sc-banner
 const bannerMotion = gsap.timeline({
@@ -139,12 +145,12 @@ const bannerMotion = gsap.timeline({
     scrub: true,
     // markers: true,
     onEnter: function () {
-      $(".sc-banner").removeClass("light");
-      $(toggleElements).removeClass("toggle");
+      $(".sc-introduce, .sc-banner").removeClass("light");
+      $(".menu-btn, .scroll-indicator").removeClass("toggle");
     },
     onLeaveBack: function () {
-      $(".sc-banner").addClass("light");
-      $(toggleElements).addClass("toggle");
+      $(".sc-introduce, .sc-banner").addClass("light");
+      $(".menu-btn, .scroll-indicator").addClass("toggle");
     },
   },
 });
@@ -188,6 +194,23 @@ $(".see-project, .code-review").hover(function () {
   $(this).closest(".project").find(".video-wrapper").toggleClass("on");
 });
 
+const skillsMotion = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sc-skills",
+    start: "0% 100%",
+    end: "50% 0%",
+    scrub: true,
+    // markers: true,
+    onEnter: function () {
+      $(".sc-skills").addClass("light");
+      $(".scroll-indicator").addClass("toggle");
+    },
+    onLeaveBack: function () {
+      $(".scroll-indicator").removeClass("toggle");
+    },
+  },
+});
+
 // sc-skills
 const cardMotion = gsap.timeline({
   scrollTrigger: {
@@ -197,54 +220,42 @@ const cardMotion = gsap.timeline({
     scrub: 3,
     // markers: true,
     onEnter: function () {
-      $(".sc-skills").addClass("light");
-      $(toggleElements).addClass("toggle");
+      $(".menu-btn, .logo-area").addClass("toggle");
     },
     onLeave: function () {
       $(".sc-skills").removeClass("light");
-      $(toggleElements).removeClass("toggle");
+      $(".menu-btn, .logo-area, .scroll-indicator").removeClass("toggle");
     },
     onEnterBack: function () {
       $(".sc-skills").addClass("light");
-      $(toggleElements).addClass("toggle");
+      $(".menu-btn, .logo-area, .scroll-indicator").addClass("toggle");
     },
     onLeaveBack: function () {
-      $(toggleElements).removeClass("toggle");
+      $(".menu-btn, .logo-area").removeClass("toggle");
     },
   },
   ease: "linear",
 });
-const xValue1 = window.innerWidth * 1.038;
-const xValue2 = window.innerWidth * 1.045;
-const xValue3 = window.innerWidth * 1.041;
-const xValue4 = window.innerWidth * 1.17;
-cardMotion
-  .fromTo(
-    ".card1",
-    { transform: `translateX(${xValue1}px) rotate(-16deg)` },
-    { transform: `translateX(-${xValue1}px) rotate(16deg)` },
-    "a"
-  )
-  .fromTo(
-    ".card2",
-    { transform: `translateX(${xValue2}px) rotate(19deg)` },
-    { transform: `translateX(-${xValue2}px) rotate(-19deg)` },
-    "a"
-  )
-  .fromTo(
-    ".card3",
-    { transform: `translateX(${xValue3}px) rotate(-11deg)` },
-    { transform: `translateX(-${xValue3}px) rotate(11deg)` },
-    "a"
-  )
-  .fromTo(
-    ".card4",
-    { transform: `translateX(${xValue4}px) rotate(19deg)` },
-    { transform: `translateX(-${xValue4}px) rotate(-19deg)` },
+const cards = [
+  { selector: ".card1", xValue: window.innerWidth * 1.038, rotation: -16 },
+  { selector: ".card2", xValue: window.innerWidth * 1.045, rotation: 19 },
+  { selector: ".card3", xValue: window.innerWidth * 1.041, rotation: -11 },
+  { selector: ".card4", xValue: window.innerWidth * 1.17, rotation: 19 },
+];
+cards.forEach((card) => {
+  cardMotion.fromTo(
+    card.selector,
+    { transform: `translateX(${card.xValue}px) rotate(${card.rotation}deg)` },
+    { transform: `translateX(-${card.xValue}px) rotate(${card.rotation * -1}deg)` },
     "a"
   );
+});
 
 // cursor
+$(".cursor-toggle").hover(function () {
+  $(".cursor-dot").toggleClass("on");
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const cursor = document.querySelector(".cursor");
   let mouseX = 0;

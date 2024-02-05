@@ -19,6 +19,9 @@ header .logo-area {
 header .logo-area.toggle {
   color: var(--main-color);
 }
+header .logo-area.opacity {
+  opacity: 0;
+}
 header .logo-area .logo {
 }
 header .logo-area div {
