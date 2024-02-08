@@ -13,490 +13,402 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
 
+    <script src="./assets/js/split.min.js"></script>
+
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 
     <link rel="stylesheet" href="./assets/css/layout.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="logo-area">
-        <h1 class="logo"></h1>
-        <div>
+    <div class="whole-wrapper">
+      <header class="header">
+        <h1>
           SON GYURI<br />
           Based in Seoul, Korea
-        </div>
-      </div>
-      <div class="menu-area">
-        <button class="menu-btn cursor-toggle">
-          <span>Menu</span>
-          <span class="hidden-text">Menu</span>
-        </button>
-        <div class="anchor-menu">
-          <div class="animation-wrapper"><a class="cursor-toggle" href="#home">Home</a></div>
-          <div class="animation-wrapper"><a class="cursor-toggle" href="#project">Project</a></div>
-          <div class="animation-wrapper"><a class="cursor-toggle" href="#introduce">About</a></div>
-          <div class="animation-wrapper"><a class="cursor-toggle" href="#contact">Contact</a></div>
-        </div>
-      </div>
-    </header>
-
-    <aside class="scroll-indicator">
-      <a class="cursor-toggle" href="">
-        <div class="scroll-wrapper">
-          <div class="dot">
-            <img src="./assets/svgs/scroll-top.svg" alt="" />
-          </div>
-          <div class="circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 48 48"
-              width="48"
-              height="48"
-              preserveAspectRatio="xMidYMid meet"
-              style="
-                width: 100%;
-                height: 100%;
-                transform: translate3d(0px, 0px, 0px);
-                content-visibility: visible;
-              "
-            >
-              <defs>
-                <clipPath id="__lottie_element_3">
-                  <rect width="48" height="48" x="0" y="0"></rect>
-                </clipPath>
-              </defs>
-              <g clip-path="url(#__lottie_element_3)">
-                <g
-                  transform="matrix(1,0,0,1,21.422000885009766,21.672000885009766)"
-                  opacity="1"
-                  style="display: block"
-                >
-                  <g opacity="1" transform="matrix(1,0,0,1,2.578000068664551,2.328000068664551)">
-                    <path
-                      fill="rgb(255,255,255)"
-                      fill-opacity="0"
-                      d=" M0,-20 C11.038000106811523,-20 20,-11.038000106811523 20,0 C20,11.038000106811523 11.038000106811523,20 0,20 C-11.038000106811523,20 -20,11.038000106811523 -20,0 C-20,-11.038000106811523 -11.038000106811523,-20 0,-20z"
-                    ></path>
-                    <path
-                      stroke-linecap="butt"
-                      stroke-linejoin="miter"
-                      fill-opacity="0"
-                      stroke-miterlimit="4"
-                      stroke="rgb(255,255,255)"
-                      stroke-opacity="0.5"
-                      stroke-width="1"
-                      d=" M0,-20 C11.038000106811523,-20 20,-11.038000106811523 20,0 C20,11.038000106811523 11.038000106811523,20 0,20 C-11.038000106811523,20 -20,11.038000106811523 -20,0 C-20,-11.038000106811523 -11.038000106811523,-20 0,-20z"
-                    ></path>
-                  </g>
-                </g>
-                <g
-                  transform="matrix(1,0,0,1,21.422000885009766,21.672000885009766)"
-                  opacity="1"
-                  style="display: block"
-                >
-                  <g opacity="1" transform="matrix(1,0,0,1,2.578000068664551,2.328000068664551)">
-                    <path fill="rgb(255,255,255)" fill-opacity="0" d="M0 0"></path>
-                    <path
-                      stroke-linecap="butt"
-                      stroke-linejoin="miter"
-                      fill-opacity="0"
-                      stroke-miterlimit="4"
-                      stroke="rgb(255,255,255)"
-                      stroke-opacity="1"
-                      stroke-width="1"
-                      d="M0 0"
-                    ></path>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </a>
-    </aside>
-
-    <main class="container">
-      <div class="sticky-wrapper">
-        <div class="sticky-inner">
-          <section class="sc-main">
-            <h2 class="main-title inner">
-              <div class="line">
-                <span class="char">M</span>
-                <span class="char">a</span>
-                <span class="char">r</span>
-                <span class="char">k</span>
-                <span class="char">u</span>
-                <span class="char">p</span>
-              </div>
-              <div class="line move">
-                <span class="char">D</span>
-                <span class="char">e</span>
-                <span class="char">v</span>
-                <span class="char">e</span>
-                <span class="char">l</span>
-                <span class="char">o</span>
-                <span class="char">p</span>
-                <span class="char">e</span>
-                <span class="char">r&nbsp;</span>
-                <span class="italic">
-                  <span class="char">o</span>
-                  <span class="char">r</span>
-                </span>
-              </div>
-              <div class="line italic">
-                <span class="char">P</span>
-                <span class="char">u</span>
-                <span class="char">b</span>
-                <span class="char">l</span>
-                <span class="char">i</span>
-                <span class="char">s</span>
-                <span class="char">h</span>
-                <span class="char">e</span>
-                <span class="char">r.</span>
-              </div>
-            </h2>
-          </section>
-
-          <section class="sc-introduce">
-            <h2 class="blind">자기소개</h2>
-            <div class="left-area">
-              <div class="infinite-text">
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-                <span>About Me</span>
-              </div>
-            </div>
-            <p>
-              <span class="word">끊임없이</span>
-              <span class="word">배우며</span>
-              <span class="word">지속적인</span>
-              <span class="word">성장을</span>
-              <span class="word">추구합니다.</span>
-              <span class="word">어떠한</span>
-              <span class="word">문제에</span>
-              <span class="word">맞닥뜨려도</span>
-              <span class="word">반드시</span>
-              <span class="word">해결해내는</span>
-              <span class="word">문제</span>
-              <span class="word">해결력과</span>
-              <span class="word">포기하지</span>
-              <span class="word">않는</span>
-              <span class="word">끈기를</span>
-              <span class="word">갖고</span>
-              <span class="word">있습니다.</span>
-              <span class="word">탄탄한</span>
-              <span class="word">마크업과</span>
-              <span class="word">효율적인</span>
-              <span class="word">CSS를</span>
-              <span class="word">기반으로</span>
-              <span class="word">유저</span>
-              <span class="word">중심의</span>
-              <span class="word">사용성과</span>
-              <span class="word">UX</span>
-              <span class="word">향상을</span>
-              <span class="word">위해</span>
-              <span class="word">깊이</span>
-              <span class="word">있게</span>
-              <span class="word">고민합니다.</span>
-            </p>
-          </section>
-        </div>
-      </div>
-
-      <section class="sc-banner">
-        <h2 class="title inner">
-          <span class="word1">From&nbsp;</span>
-          <span class="word2">Challenge&nbsp;</span>
-          <span class="word3">to&nbsp;</span>
-          <span class="word4">Failure,&nbsp;</span>
-          <span class="word5">From&nbsp;</span>
-          <span class="word6">Failure&nbsp;</span>
-          <span class="word7">to&nbsp;</span>
-          <span class="word8">Growth&nbsp;</span>
-        </h2>
-        <svg
-          class="ell"
-          fill="none"
-          height="424"
-          viewBox="0 0 762 424"
-          width="762"
-          xmlns="http://www.w3.org/2000/svg"
-          style="transform: translate(-50%, -50%) rotate(40deg)"
-        >
-          <path
-            d="m761.5 212c0 58.278-42.459 111.144-111.335 149.469-68.86 38.316-164.023 62.031-269.165 62.031s-200.305-23.715-269.165-62.031c-68.8763-38.325-111.335-91.191-111.335-149.469 0-58.279 42.4587-111.145 111.335-149.4702 68.86-38.3158 164.023-62.030288 269.165-62.030288s200.305 23.714488 269.165 62.030288c68.876 38.3252 111.335 91.1912 111.335 149.4702z"
-            opacity="0"
-            stroke="#fff"
-          ></path>
-        </svg>
-      </section>
-
-      <section class="sc-project" id="project">
-        <h2 class="blind">프로젝트</h2>
-        <section class="project-1 project">
-          <div class="content-wrapper inner">
-            <h3 class="title">PP Fragment</h3>
-            <p class="description">GSAP과 scrollTrigger를 활용한 반응형 웹사이트입니다.</p>
-            <div class="btn-wrapper">
-              <a
-                href="https://gyurison7.github.io/pp-fragment-clone/"
-                class="see-project cursor-toggle"
-                target="_blank"
-              >
-                <span>See Porject</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-              <a
-                href="https://velog.io/@orangetree401/코드-리뷰-PP-Fragment-클론-코딩"
-                class="code-review cursor-toggle"
-                target="_blank"
-              >
-                <span>Code Review</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-            </div>
-          </div>
-          <div class="img-wrapper right">
-            <img src="./assets/imgs/project-1.jpg" alt="" />
-          </div>
-        </section>
-
-        <section class="project-2 project">
-          <div class="content-wrapper inner">
-            <h3 class="title">Enterprise Blockchain</h3>
-            <p class="description">GSAP과 scrollTrigger를 활용한 반응형 웹사이트입니다.</p>
-            <div class="btn-wrapper">
-              <a
-                href="https://gyurison7.github.io/enterpriseblockchain-clone/"
-                class="see-project cursor-toggle"
-                target="_blank"
-              >
-                <span>See Porject</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-              <a
-                href="https://velog.io/@orangetree401/코드-리뷰-엔터프라이즈-블록체인-클론-코딩"
-                class="code-review cursor-toggle"
-                target="_blank"
-              >
-                <span>Code Review</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-            </div>
-          </div>
-          <div class="video-wrapper">
-            <video
-              autoplay
-              loop
-              playsinline
-              muted
-              src="./assets/videos/Archivo-VariableFont_Medium_C_PC.mp4"
-            ></video>
-          </div>
-        </section>
-
-        <section class="project-3 project">
-          <div class="content-wrapper inner">
-            <h3 class="title">Lego Classic Sapce</h3>
-            <p class="description">
-              GSAP 라이브러리를 활용해 인터랙티브한 모션에 중점을 두고<br />
-              클론 코딩한 웹사이트입니다.
-            </p>
-            <div class="btn-wrapper">
-              <a
-                href="https://gyurison7.github.io/legospace-clone/"
-                class="see-project cursor-toggle"
-                target="_blank"
-              >
-                <span>See Porject</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-              <a
-                href="https://velog.io/@orangetree401/코드-리뷰-Lego-Classic-Space-클론-코딩"
-                class="code-review cursor-toggle"
-                target="_blank"
-              >
-                <span>Code Review</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-            </div>
-          </div>
-          <div class="img-wrapper-lego">
-            <img src="./assets/imgs/atom.png" alt="" />
-          </div>
-        </section>
-
-        <section class="project-4 project">
-          <div class="content-wrapper inner">
-            <h3 class="title">LOUD</h3>
-            <p class="description">
-              JSON 비동기 통신을 통해 데이터를 바인딩하여<br />
-              클론 코딩한 웹사이트입니다.
-            </p>
-            <div class="btn-wrapper">
-              <a
-                href="https://gyurison7.github.io/loud-clone/"
-                class="see-project cursor-toggle"
-                target="_blank"
-              >
-                <span>See Porject</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-              <a
-                href="https://velog.io/@orangetree401/코드-리뷰-LOUD-클론-코딩"
-                class="code-review cursor-toggle"
-                target="_blank"
-              >
-                <span>Code Review</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-            </div>
-          </div>
-          <div class="img-wrapper">
-            <img src="./assets/imgs/project-4.webp" alt="" />
-          </div>
-        </section>
-
-        <section class="project-5 project">
-          <div class="content-wrapper inner">
-            <h3 class="title">GS Elevator</h3>
-            <p class="description">
-              SCSS를 사용하여 다양한 디바이스에 유연하게 대응하는<br />
-              반응형 웹사이트입니다.
-            </p>
-            <div class="btn-wrapper">
-              <a
-                href="https://gyurison7.github.io/gs-elevator-clone/"
-                class="see-project cursor-toggle"
-                target="_blank"
-              >
-                <span>See Porject</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-              <a
-                href="https://velog.io/@orangetree401/코드-리뷰-GS-Elevator-클론-코딩"
-                class="code-review cursor-toggle"
-                target="_blank"
-              >
-                <span>Code Review</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-            </div>
-          </div>
-          <!-- <div class="img-wrapper">
-            <img src="./assets/imgs/project-5.jpg" alt="" />
-          </div> -->
-          <div class="video-wrapper">
-            <video autoplay loop playsinline muted src="./assets/videos/intro-video.mp4"></video>
-          </div>
-        </section>
-
-        <section class="project-6 project">
-          <div class="content-wrapper inner">
-            <h3 class="title">Seoul City Hall</h3>
-            <p class="description">
-              시맨틱 태그 및 IR기법을 사용하여 웹 접근성에 중점을 두고<br />
-              클론 코딩한 웹사이트입니다.
-            </p>
-            <div class="btn-wrapper">
-              <a
-                href="https://gyurison7.github.io/loud-clone/"
-                class="see-project cursor-toggle"
-                target="_blank"
-              >
-                <span>See Porject</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-              <a
-                href="https://velog.io/@orangetree401/코드-리뷰-LOUD-클론-코딩"
-                class="code-review cursor-toggle"
-                target="_blank"
-              >
-                <span>Code Review</span>
-                <span class="link-btn"><img src="./assets/svgs/arrow.svg" alt="" /></span>
-              </a>
-            </div>
-          </div>
-          <div class="img-wrapper">
-            <img src="./assets/imgs/project-5.jpg" alt="" />
-          </div>
-        </section>
-      </section>
-
-      <section class="sc-skills">
-        <h2 class="blind">사용 가능한 skills</h2>
-        <div class="sticky-wrapper">
-          <ul class="card-list">
-            <li class="card1">
-              <h3 class="title">HTML5</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, pariatur.
-                Architecto quia, laboriosam necessitatibus obcaecati ut assumenda blanditiis eveniet
-                ipsam.
-              </p>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li>
+              <a class="cursor-toggle underline" href="#project">PROJECT</a>
             </li>
-            <li class="card2">
-              <h3 class="title">CSS3</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, pariatur.
-                Architecto quia, laboriosam necessitatibus obcaecati ut assumenda blanditiis eveniet
-                ipsam.
-              </p>
+            <li>
+              <a class="cursor-toggle underline" href="#about">ABOUT</a>
             </li>
-            <li class="card3">
-              <h3 class="title">SCSS</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, pariatur.
-                Architecto quia, laboriosam necessitatibus obcaecati ut assumenda blanditiis eveniet
-                ipsam.
-              </p>
-            </li>
-            <li class="card4">
-              <h3 class="title">Javascript</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, pariatur.
-                Architecto quia, laboriosam necessitatibus obcaecati ut assumenda blanditiis eveniet
-                ipsam.
-              </p>
+            <li>
+              <a class="cursor-toggle underline" href="#contact">CONTACT</a>
             </li>
           </ul>
-        </div>
-      </section>
-    </main>
+        </nav>
+      </header>
 
-    <footer class="footer inner" id="contact">
-      <div class="top">
-        <h2 class="title">Let's work together!</h2>
+      <aside class="current-section">INTRO</aside>
+      <aside class="cursor-position">[x:0][y:0]</aside>
+      <aside class="scroll-direction">scroll down</aside>
+      <aside class="scroll-bar"></aside>
+      <aside class="copyright">© 2024 All Rights Reserved.</aside>
+      <aside class="email">
+        <a class="cursor-toggle underline" href="mailto=orangetree401@gamil.com"
+          >orangetree401@gmail.com</a
+        >
+      </aside>
+
+      <main class="container">
+        <section class="sc-intro" id="intro">
+          <h2 class="intro-title">
+            <span class="line line1">MARKUP DEVELOPER</span>
+            <span class="line line2">NAME</span>
+            <span class="line line3 point">SON GYURI</span>
+            <span class="line line4">©2024</span>
+            <span class="line line5 point">PORTFOLIO</span>
+            <span class="line line6">Explore with me.</span>
+            <p class="description">
+              지난 2개월 동안 웹 개발에 대해 깊게 또 넓게 탐색하는 여정을 거쳤습니다. 이
+              포트폴리오는 그 과정에서 겪은 배움, 도전, 그리고 성장의 이야기를 담고 있습니다. 저는
+              모든 사용자가 차별 없이 동일한 정보와 서비스를 받을 수 있는, 그리고 다양한 환경에서
+              누구나 쉽게 접근하고 이용할 수 있는 웹사이트를 만들고 싶습니다. 실패를 두려워하지
+              않고, 항상 새로운 것을 배우려는 자세로 이 분야에서 성장해나가고자 합니다.
+            </p>
+          </h2>
+          <img src="./assets/imgs/03.png" class="deco1" alt="" />
+          <img src="./assets/imgs/15.png" class="deco2" alt="" />
+          <img src="./assets/imgs/27.png" class="deco3" alt="" />
+          <img src="./assets/imgs/16.png" class="deco4" alt="" />
+          <img src="./assets/imgs/89.png" class="deco5" alt="" />
+        </section>
+
+        <section class="sc-project">
+          <h2 class="section-title">
+            <span class="char">S</span>
+            <span class="char">t</span>
+            <span class="char">a</span>
+            <span class="char">r</span>
+            <span class="char">t&nbsp;</span>
+            <span class="char">P</span>
+            <span class="char">r</span>
+            <span class="char">o</span>
+            <span class="char">j</span>
+            <span class="char">e</span>
+            <span class="char">c</span>
+            <span class="char">t</span>
+          </h2>
+          <section class="project-1 project" id="project">
+            <div class="dim"></div>
+            <div class="content-wrapper">
+              <div class="content-top">
+                <a
+                  class="see-project"
+                  href="https://gyurison7.github.io/pp-fragment-clone/"
+                  target="_blank"
+                >
+                  <span>→ PP Fragment</span>
+                  <span>→ PP Fragment</span>
+                  <span>→ PP Fragment</span>
+                </a>
+              </div>
+              <h3 class="title">PP Fragment</h3>
+              <div class="content-bottom">
+                <span class="description1">+ 작업기간: 3일</span>
+                <ul class="description2">
+                  <li>#GSAP</li>
+                  <li>#ScrollTrigger</li>
+                  <li>#Swiper</li>
+                </ul>
+                <p class="description3">
+                  <a
+                    class="code-review"
+                    href="https://velog.io/@orangetree401/코드-리뷰-PP-Fragment-클론-코딩"
+                    target="_blank"
+                  >
+                    » GSAP 및 ScrollTrigger를 활용한 적응형 웹사이트입니다. 동적 줄바꿈 처리 기능을
+                    구현하여 다양한 디바이스와 화면 크기에 맞춰 유연하게 대응할 수 있도록
+                    작업하였습니다. 이를 통해 JavaScript와 DOM 조작에 대한 깊은 이해를 얻었으며,
+                    반응형 디자인과 웹 접근성의 중요성을 다시 새길 수 있었습니다.
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="img-wrapper1"><img src="./assets/imgs/capital1.png" alt="" /></div>
+            <div class="img-wrapper1"><img src="./assets/imgs/capital2.png" alt="" /></div>
+            <div class="img-wrapper1"><img src="./assets/imgs/capital3.png" alt="" /></div>
+            <div class="img-wrapper1"><img src="./assets/imgs/capital4.png" alt="" /></div>
+            <div class="img-wrapper1"><img src="./assets/imgs/capital5.png" alt="" /></div>
+            <div class="img-wrapper1"><img src="./assets/imgs/capital6.png" alt="" /></div>
+          </section>
+
+          <section class="project-2 project">
+            <div class="dim"></div>
+            <div class="content-wrapper">
+              <div class="content-top">
+                <a
+                  class="see-project"
+                  href="https://gyurison7.github.io/enterpriseblockchain-clone/"
+                  target="_blank"
+                >
+                  <span>→ ENTERPRISE<br />BLOCKCHAIN</span>
+                  <span>→ ENTERPRISE<br />BLOCKCHAIN</span>
+                  <span>→ ENTERPRISE<br />BLOCKCHAIN</span>
+                </a>
+              </div>
+              <h3 class="title">ENTERPRISE<br />BLOCKCHAIN</h3>
+              <div class="content-bottom">
+                <span class="description1">+ 작업기간: 5일</span>
+                <ul class="description2">
+                  <li>#GSAP</li>
+                  <li>#ScrollTrigger</li>
+                </ul>
+                <p class="description3">
+                  <a
+                    class="code-review"
+                    href="https://velog.io/@orangetree401/코드-리뷰-엔터프라이즈-블록체인-클론-코딩"
+                    target="_blank"
+                  >
+                    » 웹사이트의 인터랙티브한 스크롤 동작 원리를 이해하기 위해 진행한
+                    프로젝트입니다. GSAP을 활용하여 스크롤에 반응하는 다이나믹한 애니메이션을
+                    구현하였습니다. 특히 'position: sticky'를 활용하여 스크롤 동작 중 특정 요소를
+                    화면에 고정시키는 sticky의 원리를 실습하면서 이에 대한 심화적인 이해를 얻을 수
+                    있었습니다.
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="video-wrapper">
+              <video
+                autoplay
+                loop
+                playsinline
+                muted
+                src="./assets/videos/Archivo-VariableFont_Medium_C_PC.mp4"
+              ></video>
+            </div>
+          </section>
+
+          <section class="project-3 project">
+            <div class="dim"></div>
+            <div class="content-wrapper">
+              <div class="content-top">
+                <a
+                  class="see-project"
+                  href="https://gyurison7.github.io/legospace-clone/"
+                  target="_blank"
+                >
+                  <span>→ LEGO SPACE</span>
+                  <span>→ LEGO SPACE</span>
+                  <span>→ LEGO SPACE</span>
+                </a>
+              </div>
+              <h3 class="title">LEGO SPACE</h3>
+              <div class="content-bottom">
+                <span class="description1">+ 작업기간: 6일</span>
+                <ul class="description2">
+                  <li>#GSAP</li>
+                  <li>#ScrollTrigger</li>
+                </ul>
+                <p class="description3">
+                  <a
+                    class="code-review"
+                    href="https://velog.io/@orangetree401/코드-리뷰-Lego-Classic-Space-클론-코딩"
+                    target="_blank"
+                  >
+                    » 작성중
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="img-wrapper">
+              <img src="./assets/imgs/lego.gif" alt="" />
+            </div>
+          </section>
+
+          <section class="project-4 project">
+            <div class="dim"></div>
+            <div class="content-wrapper">
+              <div class="content-top">
+                <a
+                  class="see-project"
+                  href="https://gyurison7.github.io/loud-clone/"
+                  target="_blank"
+                >
+                  <span>→ LOUD</span>
+                  <span>→ LOUD</span>
+                  <span>→ LOUD</span>
+                </a>
+              </div>
+              <h3 class="title">LOUD</h3>
+              <div class="content-bottom">
+                <span class="description1">+ 작업기간: 3일</span>
+                <ul class="description2">
+                  <li>#JSON</li>
+                  <li>#비동기 통신</li>
+                  <li>#Swiper</li>
+                </ul>
+                <p class="description3">
+                  <a
+                    class="code-review"
+                    href="https://velog.io/@orangetree401/코드-리뷰-LOUD-클론-코딩"
+                    target="_blank"
+                  >
+                    » JSON 비동기 통신을 통해 웹사이트에 필요한 데이터를 바인딩하여 클론 코딩한
+                    프로젝트입니다. JavaScript의 'fetch'를 사용하여 외부 JSON 파일에서 데이터를
+                    비동기적으로 로드하는 방법을 실습했으며, 다수의 JSON 파일로부터 데이터를
+                    바인딩하는 과정에서 효율적인 코드 구조와 데이터 관리의 중요성에 대해 배울 수
+                    있었습니다.
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="img-wrapper">
+              <img src="./assets/imgs/design.webp" alt="" />
+            </div>
+          </section>
+
+          <section class="project-5 project">
+            <div class="dim"></div>
+            <div class="content-wrapper">
+              <div class="content-top">
+                <a
+                  class="see-project"
+                  href="https://gyurison7.github.io/gs-elevator-clone/"
+                  target="_blank"
+                >
+                  <span>→ GS ELEVATOR</span>
+                  <span>→ GS ELEVATOR</span>
+                  <span>→ GS ELEVATOR</span>
+                </a>
+              </div>
+              <h3 class="title">GS ELEVATOR</h3>
+              <div class="content-bottom">
+                <span class="description1">+ 작업기간: 3일</span>
+                <ul class="description2">
+                  <li>#SCSS</li>
+                  <li>#반응형</li>
+                  <li>#Lenis</li>
+                </ul>
+                <p class="description3">
+                  <a
+                    class="code-review"
+                    href="https://velog.io/@orangetree401/코드-리뷰-GS-Elevator-클론-코딩"
+                    target="_blank"
+                  >
+                    » SCSS와 미디어쿼리를 활용하여 다양한 디바이스에 유연하게 대응하는 반응형
+                    웹사이트를 구현했습니다. SCSS의 미디어쿼리 믹스인을 사용하여 다양한
+                    브레이크포인트를 정의하고 관리했습니다. 또한 Lenis를 도입하여 스크롤
+                    애니메이션과 인터랙션을 부드럽게 처리하여 웹사이트의 전반적인 사용자 경험을
+                    향상시켰습니다.
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="img-wrapper">
+              <img src="./assets/imgs/g-novia.jpg" alt="" />
+            </div>
+          </section>
+
+          <section class="project-6 project">
+            <div class="dim"></div>
+            <div class="content-wrapper">
+              <div class="content-top">
+                <a
+                  class="see-project"
+                  href="https://gyurison7.github.io/seoul-city-hall-clone/"
+                  target="_blank"
+                >
+                  <span>→ SEOUL CITY HALL</span>
+                  <span>→ SEOUL CITY HALL</span>
+                  <span>→ SEOUL CITY HALL</span>
+                </a>
+              </div>
+              <h3 class="title">SEOUL CITY HALL</h3>
+              <div class="content-bottom">
+                <span class="description1">+ 작업기간: 1일</span>
+                <ul class="description2">
+                  <li>#시맨틱 태그</li>
+                  <li>#IR기법</li>
+                  <li>#웹접근성</li>
+                </ul>
+                <p class="description3">
+                  <a
+                    class="code-review"
+                    href="https://velog.io/@orangetree401/코드-리뷰-서울시청-클론코딩"
+                    target="_blank"
+                  >
+                    » 시맨틱 태그와 IR 기법을 활용하여 웹 접근성에 중점을 두고 클론 코딩한
+                    웹사이트입니다. 스크린 리더 사용자가 웹사이트에 보다 쉽게 접근하고 컨텐츠를
+                    이해할 수 있도록 도왔습니다. '.blind' 클래스를 사용하여 시각적으로는 노출되지
+                    않지만 스크린 리더 사용자가 중요한 정보에 접근 가능하도록 제작하였습니다.
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="img-wrapper">
+              <img src="./assets/imgs/seoul.jpg" alt="" />
+            </div>
+          </section>
+          <div class="spacer"></div>
+        </section>
+
+        <section class="sc-about">
+          <h2 class="section-title">
+            <span class="char">A</span>
+            <span class="char">b</span>
+            <span class="char">o</span>
+            <span class="char">u</span>
+            <span class="char">t&nbsp;</span>
+            <span class="char">M</span>
+            <span class="char">e</span>
+          </h2>
+          <div class="sticky-wrapper" id="about">
+            <p>
+              <span class="char">끊</span><span class="char">임</span><span class="char">없</span
+              ><span class="char">이 </span><span class="char">배</span><span class="char">우</span
+              ><span class="char">며 </span><span class="char">지</span><span class="char">속</span
+              ><span class="char">적</span><span class="char">인 </span><em class="char">성</em
+              ><em class="char">장</em><span class="char">을 </span><span class="char">추</span
+              ><span class="char">구</span><span class="char">합</span><span class="char">니</span
+              ><span class="char">다. </span><span class="char">어</span><span class="char">떠</span
+              ><span class="char">한 </span><span class="char">문</span><span class="char">제</span
+              ><span class="char">에 </span><span class="char">맞</span><span class="char">닥</span
+              ><span class="char">뜨</span><span class="char">려</span><span class="char">도 </span
+              ><span class="char">반</span><span class="char">드</span><span class="char">시 </span
+              ><span class="char">해</span><span class="char">결</span><span class="char">해</span
+              ><span class="char">내</span><span class="char">는 </span><em class="char">문</em
+              ><em class="char">제 </em><em class="char">해</em><em class="char">결</em
+              ><em class="char">력</em><span class="char">과 </span><span class="char">포</span
+              ><span class="char">기</span><span class="char">하</span><span class="char">지 </span
+              ><span class="char">않</span><span class="char">는 </span><em class="char">끈</em
+              ><em class="char">기</em><span class="char">를 </span><span class="char">갖</span
+              ><span class="char">고 </span><span class="char">있</span><span class="char">습</span
+              ><span class="char">니</span><span class="char">다. </span><span class="char">탄</span
+              ><span class="char">탄</span><span class="char">한 </span><span class="char">마</span
+              ><span class="char">크</span><span class="char">업</span><span class="char">과 </span
+              ><span class="char">효</span><span class="char">율</span><span class="char">적</span
+              ><span class="char">인 </span><span class="char">C</span><span class="char">S</span
+              ><span class="char">S</span><span class="char">를 </span><span class="char">기</span
+              ><span class="char">반</span><span class="char">으</span><span class="char">로 </span
+              ><span class="char">유</span><span class="char">저 </span><span class="char">중</span
+              ><span class="char">심</span><span class="char">의 </span><span class="char">사</span
+              ><span class="char">용</span><span class="char">성</span><span class="char">과 </span
+              ><em class="char">U</em><em class="char">X </em><em class="char">향</em
+              ><em class="char">상</em><span class="char">을 </span><span class="char">위</span
+              ><span class="char">해 </span><span class="char">깊</span><span class="char">이 </span
+              ><span class="char">있</span><span class="char">게 </span><span class="char">고</span
+              ><span class="char">민</span><span class="char">합</span><span class="char">니</span
+              ><span class="char">다. </span>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer" id="contact">
+        <img src="./assets/imgs/bg.png" alt="" />
+        <h2 class="footer-title">
+          <a href="mailto=orangetree401@gamil.com">Let's work together!</a>
+        </h2>
+      </footer>
+
+      <div class="cursor">
+        <div class="cursor-dot"></div>
       </div>
-      <div class="bottom">
-        <div class="contact-wrapper">
-          <a class="cursor-toggle" href="mailto:orangetree401@gmail.com">orangetree401@gmail.com</a>
-          <a class="cursor-toggle" href="https://velog.io/@orangetree401/posts" target="_blank"
-            ><img src="./assets/imgs/velog-icon.png" alt="velog"
-          /></a>
-          <a class="cursor-toggle" href="https://github.com/gyurison7" target="_blank"
-            ><img src="./assets/imgs/github-icon.png" alt="github"
-          /></a>
-        </div>
-        <small>© 2024 All Rights Reserved.</small>
-      </div>
-    </footer>
-    <div class="cursor">
-      <div class="cursor-dot"></div>
     </div>
     <script src="./assets/js/index.js"></script>
   </body>

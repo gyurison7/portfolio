@@ -1,18 +1,42 @@
 @font-face {
-  font-family: "KonnectLightItalic";
-  src: url("../fonts/646483f351fa167831598b82_Konnect-LightItalic.woff2") format("woff2");
+  font-family: "Almarena";
+  src: url("../fonts/AlmarenaLight.woff2") format("woff2");
+  font-weight: 300;
 }
 @font-face {
-  font-family: "KonnectRegular";
-  src: url("../fonts/646483f3e81b76287a0daaf2_Konnect-Regular.woff2") format("woff2");
+  font-family: "Almarena";
+  src: url("../fonts/AlmarenaRegular.woff2") format("woff2");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "KonnectLight";
-  src: url("../fonts/646483f6ff1b9504a8d93b89_Konnect-Light.woff2") format("woff2");
+  font-family: "Almarena";
+  src: url("../fonts/AlmarenaSemiBold.woff2") format("woff2");
+  font-weight: 600;
 }
 @font-face {
-  font-family: "SFProKR";
-  src: url("../fonts/SFProKRDisplay_regular.woff2") format("woff2");
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-Light.woff") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-Regular.woff") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-Medium.woff") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SemiBold.woff") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../fonts/NeueMontreal-Regular.woff") format("woff2");
+  font-weight: 400;
 }
 
 * {
@@ -68,11 +92,14 @@ table {
 }
 
 body {
-  min-height: 100%;
   color: #fff;
   background-color: var(--main-color);
-  font-family: "KonnectRegular", Arial, sans-serif;
+  font-family: "Almarena", Arial, sans-serif;
   font-size: 14px;
-  line-height: 20px;
+  font-weight: 400;
+  line-height: 1;
   letter-spacing: 0.02rem;
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
