@@ -24,3 +24,8 @@
     font-size: 14px;
   }
 }
+@media (max-width: 1366px) {
+  :root {
+    font-size: 13px;
+  }
+}

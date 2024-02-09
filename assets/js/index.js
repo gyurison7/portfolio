@@ -40,28 +40,48 @@ $(".gnb a").click(function (e) {
   e.preventDefault();
   const target = $(this).attr("href");
   const element = $(target);
-  const targetOffset = element.offset().top;
-  lenis.scrollTo(targetOffset);
+  if (target === "#project") {
+    const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+    // 퍼센테이지를 다시 픽셀 값으로 계산
+    scrollPixel = (totalScroll * 14) / 100;
+    lenis.scrollTo(scrollPixel);
+  } else {
+    const targetOffset = element.offset().top;
+    lenis.scrollTo(targetOffset);
+  }
 });
 
-// section-title
-document.querySelectorAll(".section-title").forEach(function (element) {
-  const chars = element.querySelectorAll(".char");
-  gsap.from(chars, {
-    scrollTrigger: {
-      trigger: element,
-      start: "0% 50%",
-      end: "100% 50%",
-      scrub: true,
-      // markers: true,
-    },
-    opacity: 0,
-    yPercent: 100,
-    stagger: 0.1,
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    $("[data-section]").each(function () {
+      if ($(window).scrollTop() >= $(this).offset().top) {
+        const currentSection = $(this).data("section");
+        $(".current-section").text(currentSection);
+      }
+    });
   });
 });
 
 // sc-project
+// section-title
+document.querySelectorAll(".bg").forEach(function (element) {
+  // 수직선
+  for (let i = 1; i < 20; i++) {
+    const vtLine = document.createElement("i");
+    vtLine.classList.add("vt-line");
+    vtLine.style.left = `${i * 5}%`;
+    element.appendChild(vtLine);
+  }
+
+  // 수평선
+  for (let i = 1; i < 3; i++) {
+    const hrLine = document.createElement("i");
+    hrLine.classList.add("hr-line");
+    hrLine.style.top = `${i * 33.3}%`;
+    element.appendChild(hrLine);
+  }
+});
+
 document.querySelectorAll(".content-wrapper").forEach(function (element) {
   const target = element.closest(".project");
   gsap.to(element, {
@@ -75,37 +95,40 @@ document.querySelectorAll(".content-wrapper").forEach(function (element) {
   });
 });
 
-const linkText = new SplitType(".content-wrapper .see-project span", { types: "chars" });
-const titleText = new SplitType(".content-wrapper .title", { types: "chars" });
-const contentText = new SplitType(
-  ".content-wrapper .description1, .content-wrapper .description2 li",
-  { types: "chars" }
-);
-
 document.querySelectorAll(".content-wrapper").forEach(function (element) {
   const chars = element.querySelectorAll(".char");
-  const textMotion = gsap.timeline({
+  const titleMotion = gsap.timeline({
     scrollTrigger: {
       trigger: element,
       start: "0% 50%",
       end: "100% 0%",
-      scrub: true,
+      toggleActions: "play none none reverse",
       // markers: true,
     },
   });
-  textMotion.from(chars, { opacity: 0, yPercent: 100, stagger: 0.1 });
+  titleMotion.from(chars, { opacity: 0, yPercent: 100, stagger: 0.05, duration: 0.5 });
 });
 
-$(".see-project, .code-review").hover(function () {
-  const className = $(this).attr("class").replace("-", " ");
-  const cursor = $(".cursor");
-  const dot = $(".cursor-dot");
-  $(cursor).toggleClass("link");
-  if ($(cursor).hasClass("link")) {
-    $(dot).text(className);
-  } else {
-    $(dot).text("");
-  }
+$(document).ready(function () {
+  $(".see-project, .code-review").hover(function () {
+    const className = $(this).attr("class").replace("-", " ");
+    const cursor = $(".cursor");
+    const circle = $(".circle");
+    const text = $(".circle-text textPath");
+    circle.css("letter-spacing", className === "see project" ? "2px" : "1.19px");
+
+    $(cursor).toggleClass("link");
+
+    if ($(cursor).hasClass("link")) {
+      let repeatText = "";
+      for (let i = 0; i < 3; i++) {
+        repeatText += className + "✦";
+      }
+      $(text).text(repeatText);
+    } else {
+      $(text).text("");
+    }
+  });
 });
 
 $(".sc-project .title").hover(function () {
@@ -113,9 +136,9 @@ $(".sc-project .title").hover(function () {
 });
 
 // sc-about
-gsap.to(".sc-about p .char", {
+gsap.to(".sc-about .char", {
   scrollTrigger: {
-    trigger: ".sc-about p",
+    trigger: ".sc-about .sticky-wrapper",
     start: "0% 0%",
     end: "100% 0%",
     scrub: true,

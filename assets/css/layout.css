@@ -102,7 +102,7 @@ aside {
 
 footer {
   position: relative;
-  margin-top: 100vh;
+  margin-top: 50vh;
   width: 100%;
   height: 100vh;
   padding: 3rem;
@@ -159,11 +159,13 @@ footer .footer-title {
   height: 6rem;
 }
 .cursor.link .cursor-dot {
-  width: 10rem;
-  height: 10rem;
-  opacity: 1;
-  color: var(--main-color);
+  display: none;
+}
+.cursor .circle {
+  display: none;
+}
+.cursor.link .circle {
+  display: block;
+  text-transform: capitalize;
   font-family: var(--font-family-nenu);
-  font-size: 1.25rem;
-  text-transform: uppercase;
 }
