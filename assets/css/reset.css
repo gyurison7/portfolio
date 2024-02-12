@@ -100,6 +100,11 @@ body {
   line-height: 1;
   letter-spacing: 0.02rem;
 }
-body::-webkit-scrollbar {
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }

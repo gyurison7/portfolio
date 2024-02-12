@@ -12,6 +12,14 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
+// loader
+window.addEventListener("DOMContentLoaded", function () {
+  this.setTimeout(function () {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".whole-wrapper").style.display = "block";
+  }, 3000);
+});
+
 // aside
 ScrollTrigger.create({
   trigger: ".whole-wrapper",
@@ -131,7 +139,7 @@ $(document).ready(function () {
   });
 });
 
-$(".sc-project .title").hover(function () {
+$(".see-project").hover(function () {
   $(this).closest(".project").find(".dim").toggleClass("on");
 });
 

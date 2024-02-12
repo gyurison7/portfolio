@@ -1,5 +1,6 @@
 @import url("./reset.css");
 @import url("./common.css");
+@import url("./loader.css");
 
 header {
   display: flex;
@@ -163,9 +164,10 @@ footer .footer-title {
 }
 .cursor .circle {
   display: none;
+  text-transform: capitalize;
+  font-family: var(--font-family-nenu);
+  letter-spacing: 2px;
 }
 .cursor.link .circle {
   display: block;
-  text-transform: capitalize;
-  font-family: var(--font-family-nenu);
 }
