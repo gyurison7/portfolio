@@ -29,3 +29,30 @@
     font-size: 13px;
   }
 }
+@media (max-width: 1280px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media (max-width: 898px) {
+  :root {
+    font-size: 11px;
+  }
+}
+
+.mo-only {
+  display: none;
+}
+@media (max-width: 1280px) {
+  .pc-only {
+    display: none;
+  }
+}
+@media (max-width: 898px) {
+  .mo-hide {
+    display: none;
+  }
+  .mo-only {
+    display: block;
+  }
+}

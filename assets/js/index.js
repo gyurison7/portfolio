@@ -44,6 +44,11 @@ lenis.on("scroll", (e) => {
   $(".scroll-bar").css("--progress", `${scrollPercentage.toFixed()}%`);
 });
 
+$(".logo a").click(function (e) {
+  e.preventDefault();
+  lenis.scrollTo(0);
+});
+
 $(".gnb a").click(function (e) {
   e.preventDefault();
   const target = $(this).attr("href");

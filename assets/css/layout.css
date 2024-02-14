@@ -15,12 +15,27 @@ header {
   mix-blend-mode: difference;
   text-transform: uppercase;
   font-family: var(--font-family-nenu);
-  font-size: 1rem;
   z-index: 99;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.2;
+  gap: 4px;
+}
+header .logo img {
+  width: 40px;
+}
+@media (max-width: 898px) {
+  header .logo img {
+    width: 32px;
+  }
 }
 .gnb ul {
   display: flex;
   align-items: center;
+  font-size: clamp(14px, 1rem, 16px);
   gap: 1.5rem;
 }
 .gnb ul li a {
@@ -31,7 +46,7 @@ aside {
   position: fixed;
   mix-blend-mode: difference;
   font-family: var(--font-family-nenu);
-  font-size: 1rem;
+  font-size: clamp(14px, 1rem, 16px);
   text-transform: uppercase;
   z-index: 99;
 }
@@ -114,7 +129,7 @@ footer img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
 }
 footer .footer-title {
