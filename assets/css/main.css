@@ -67,19 +67,14 @@
   }
 }
 .sc-intro .intro-title .description {
-  grid-row: 5/7;
+  grid-row: 4/7;
   grid-column: span 4/-1;
-  margin-top: -3rem;
-  margin-left: 5rem;
+  align-self: center;
+  margin-left: 6rem;
   font-family: var(--font-family-pretendard);
   font-size: clamp(14px, 1.25rem, 20px);
   line-height: 1.8;
   color: #a8a8a8;
-}
-@media (max-width: 1366px) {
-  .sc-intro .intro-title .description {
-    margin-left: 10rem;
-  }
 }
 .sc-intro [class*="deco"] {
   z-index: -1;
@@ -107,7 +102,7 @@
 }
 .sc-intro .deco4 {
   position: absolute;
-  top: 55%;
+  top: 54%;
   right: 33%;
   width: 40vh;
 }
