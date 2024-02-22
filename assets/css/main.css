@@ -414,7 +414,7 @@
 }
 .sc-about .sticky-wrapper p {
   font-family: var(--font-family-pretendard);
-  font-size: clamp(20px, 5vw, 70px);
+  font-size: clamp(20px, 4vw, 70px);
   font-weight: 500;
   line-height: 1.4;
 }
