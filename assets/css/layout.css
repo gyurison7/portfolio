@@ -182,7 +182,18 @@ footer .footer-title {
   text-transform: capitalize;
   font-family: var(--font-family-nenu);
   letter-spacing: 2px;
+  will-change: transform;
+  animation: circleAnimation 15s linear infinite;
 }
 .cursor.link .circle {
   display: block;
+}
+
+@keyframes circleAnimation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
